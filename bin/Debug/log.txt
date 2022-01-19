@@ -1708,3 +1708,838 @@
 2022-01-18 11:59:35: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
 2022-01-18 11:59:35: Vendor: Intel, driver: Intel(R) HD Graphics 530
 2022-01-18 11:59:35: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 12:37:33: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 12:37:33: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 12:37:33: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 12:37:33: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 12:45:12: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 12:45:12: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 12:45:12: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 12:45:12: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 12:46:51: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 12:46:51: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 12:46:51: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 12:46:51: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 12:48:15: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 12:48:15: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 12:48:15: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 12:48:15: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 12:51:12: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 12:51:12: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 12:51:12: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 12:51:12: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 12:52:09: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 12:52:09: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 12:52:09: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 12:52:09: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 12:52:52: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 12:52:52: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 12:52:52: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 12:52:52: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 12:53:14: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 12:53:14: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 12:53:14: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 12:53:14: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 12:53:45: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 12:53:45: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 12:53:45: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 12:53:45: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 12:54:27: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 12:54:27: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 12:54:27: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 12:54:27: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 12:54:40: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 12:54:40: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 12:54:40: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 12:54:40: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 12:56:18: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 12:56:18: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 12:56:18: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 12:56:18: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 12:57:29: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 12:57:29: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 12:57:29: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 12:57:29: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 13:02:52: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 13:02:52: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 13:02:52: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 13:02:52: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 13:05:37: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 13:05:37: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 13:05:37: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 13:05:37: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 13:07:03: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 13:07:03: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 13:07:03: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 13:07:03: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 13:29:09: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 13:29:09: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 13:29:09: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 13:29:09: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 13:29:39: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 13:29:39: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 13:29:39: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 13:29:39: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 13:29:50: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 13:29:50: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 13:29:50: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 13:29:50: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 13:30:20: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 13:30:20: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 13:30:20: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 13:30:20: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 13:30:33: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 13:30:33: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 13:30:33: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 13:30:33: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 13:30:47: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 13:30:47: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 13:30:47: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 13:30:47: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 17:32:02: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 17:32:02: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 17:32:02: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 17:32:02: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 17:33:10: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 17:33:10: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 17:33:10: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 17:33:10: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 17:33:35: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 17:33:35: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 17:33:35: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 17:33:35: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 17:34:10: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 17:34:10: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 17:34:10: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 17:34:10: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 17:34:45: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 17:34:45: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 17:34:45: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 17:34:45: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 17:35:26: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 17:35:26: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 17:35:26: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 17:35:26: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 17:36:24: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 17:36:24: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 17:36:24: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 17:36:24: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:00:31: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:00:31: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:00:31: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:00:31: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:02:37: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:02:37: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:02:37: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:02:37: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:04:01: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:04:01: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:04:01: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:04:01: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:39:28: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:39:28: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:39:28: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:39:28: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:39:56: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:39:56: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:39:56: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:39:56: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:40:34: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:40:34: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:40:34: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:40:34: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:41:05: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:41:05: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:41:05: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:41:05: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:41:26: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:41:26: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:41:26: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:41:26: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:41:37: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:41:37: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:41:37: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:41:37: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:41:45: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:41:45: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:41:45: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:41:45: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:42:04: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:42:04: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:42:04: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:42:04: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:42:33: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:42:33: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:42:33: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:42:33: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:43:12: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:43:12: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:43:12: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:43:12: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:47:59: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:47:59: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:47:59: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:47:59: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:48:46: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:48:46: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:48:46: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:48:46: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 18:52:36: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 18:52:36: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 18:52:36: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 18:52:36: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 19:27:57: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 19:27:57: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 19:27:57: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 19:27:57: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 19:30:24: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 19:30:24: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 19:30:24: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 19:30:24: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 19:30:38: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 19:30:38: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 19:30:38: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 19:30:38: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 19:31:06: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 19:31:06: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 19:31:06: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 19:31:06: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 19:31:38: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 19:31:38: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 19:31:38: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 19:31:38: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 19:31:49: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 19:31:49: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 19:31:49: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 19:31:49: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 19:33:09: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 19:33:09: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 19:33:09: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 19:33:09: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 19:34:10: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 19:34:10: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 19:34:10: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 19:34:10: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 19:34:20: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 19:34:20: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 19:34:20: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 19:34:20: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 19:35:03: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 19:35:03: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 19:35:03: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 19:35:03: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 19:35:34: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 19:35:34: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 19:35:34: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 19:35:34: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 19:36:05: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 19:36:05: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 19:36:05: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 19:36:05: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 19:37:39: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 19:37:39: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 19:37:39: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 19:37:39: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 19:58:37: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 19:58:37: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 19:58:37: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 19:58:37: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 19:59:55: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 19:59:55: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 19:59:55: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 19:59:55: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 20:00:57: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 20:00:57: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 20:00:57: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 20:00:57: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 20:10:04: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 20:10:04: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 20:10:04: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 20:10:04: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 20:10:27: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 20:10:27: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 20:10:27: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 20:10:27: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 20:10:59: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 20:10:59: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 20:10:59: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 20:10:59: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 20:16:09: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 20:16:09: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 20:16:09: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 20:16:09: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 20:16:49: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 20:16:49: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 20:16:49: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 20:16:49: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 20:19:35: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 20:19:35: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 20:19:35: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 20:19:35: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 20:20:40: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 20:20:40: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 20:20:40: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 20:20:40: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 20:20:55: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 20:20:55: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 20:20:55: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 20:20:55: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 20:21:29: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 20:21:29: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 20:21:29: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 20:21:29: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 20:22:43: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 20:22:43: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 20:22:43: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 20:22:43: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:36:21: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:36:21: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:36:21: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:36:21: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:36:44: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:36:44: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:36:44: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:36:44: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:36:55: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:36:55: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:36:55: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:36:55: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:40:14: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:40:14: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:40:14: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:40:14: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:41:33: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:41:33: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:41:33: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:41:33: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:43:22: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:43:22: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:43:22: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:43:22: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:43:36: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:43:36: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:43:36: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:43:36: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:44:20: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:44:20: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:44:20: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:44:20: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:44:37: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:44:37: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:44:37: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:44:37: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:45:29: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:45:29: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:45:29: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:45:29: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:45:45: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:45:45: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:45:45: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:45:45: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:46:15: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:46:15: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:46:15: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:46:15: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:46:56: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:46:56: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:46:56: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:46:56: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:47:03: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:47:03: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:47:03: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:47:03: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:47:35: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:47:35: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:47:35: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:47:35: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:54:10: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:54:10: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:54:10: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:54:10: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:55:24: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:55:24: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:55:24: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:55:24: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:56:00: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:56:00: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:56:00: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:56:00: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:58:48: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:58:48: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:58:48: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:58:48: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:59:22: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:59:22: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:59:22: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:59:22: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 22:59:41: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 22:59:41: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 22:59:41: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 22:59:41: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:00:05: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:00:05: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:00:05: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:00:05: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:00:51: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:00:51: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:00:51: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:00:51: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:01:37: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:01:37: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:01:37: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:01:37: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:01:52: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:01:52: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:01:52: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:01:52: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:02:13: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:02:13: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:02:13: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:02:13: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:02:26: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:02:26: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:02:26: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:02:26: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:04:13: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:04:13: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:04:13: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:04:13: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:09:08: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:09:08: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:09:08: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:09:08: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:09:56: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:09:56: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:09:56: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:09:56: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:17:47: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:17:47: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:17:47: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:17:47: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:18:32: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:18:32: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:18:32: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:18:32: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:31:12: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:31:12: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:31:12: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:31:12: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:33:04: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:33:04: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:33:04: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:33:04: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:34:46: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:34:46: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:34:46: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:34:46: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:35:02: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:35:02: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:35:02: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:35:02: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:40:41: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:40:41: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:40:41: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:40:41: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:40:59: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:40:59: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:40:59: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:40:59: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:48:28: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:48:28: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:48:28: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:48:28: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:48:50: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:48:50: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:48:50: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:48:50: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:52:57: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:52:57: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:52:57: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:52:57: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:53:39: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:53:39: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:53:39: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:53:39: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:54:00: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:54:00: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:54:00: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:54:00: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-18 23:55:02: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-18 23:55:02: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-18 23:55:02: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-18 23:55:02: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 00:02:03: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 00:02:03: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 00:02:03: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 00:02:03: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 00:04:25: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 00:04:25: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 00:04:25: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 00:04:25: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:26:40: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:26:40: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:26:40: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:26:40: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:29:21: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:29:21: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:29:21: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:29:21: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:31:10: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:31:10: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:31:10: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:31:10: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:37:11: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:37:11: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:37:11: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:37:11: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:43:16: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:43:16: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:43:16: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:43:16: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:44:56: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:44:56: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:44:56: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:44:56: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:45:50: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:45:50: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:45:50: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:45:50: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:46:00: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:46:00: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:46:00: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:46:00: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:46:28: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:46:28: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:46:28: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:46:28: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:46:54: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:46:54: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:46:54: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:46:54: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:49:56: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:49:56: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:49:56: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:49:56: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:50:30: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:50:30: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:50:30: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:50:30: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:50:50: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:50:50: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:50:50: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:50:50: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:51:13: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:51:13: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:51:13: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:51:13: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:51:30: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:51:30: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:51:30: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:51:30: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:53:05: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:53:05: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:53:05: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:53:05: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 01:57:06: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 01:57:06: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 01:57:06: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 01:57:06: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:00:32: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:00:32: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:00:32: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:00:32: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:02:16: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:02:16: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:02:16: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:02:16: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:04:00: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:04:00: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:04:00: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:04:00: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:08:12: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:08:12: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:08:12: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:08:12: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:12:09: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:12:09: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:12:09: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:12:09: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:15:54: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:15:54: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:15:54: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:15:54: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:18:48: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:18:48: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:18:48: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:18:48: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:19:27: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:19:27: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:19:27: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:19:27: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:21:01: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:21:01: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:21:01: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:21:01: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:28:09: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:28:09: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:28:09: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:28:09: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:32:03: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:32:03: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:32:03: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:32:03: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:33:01: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:33:01: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:33:01: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:33:01: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:34:05: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:34:05: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:34:05: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:34:05: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:35:07: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:35:07: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:35:07: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:35:07: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:38:14: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:38:14: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:38:14: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:38:14: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:39:34: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:39:34: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:39:34: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:39:34: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:44:23: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:44:23: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:44:23: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:44:23: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:50:53: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:50:53: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:50:53: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:50:53: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:52:08: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:52:08: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:52:08: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:52:08: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:56:43: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:56:43: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:56:43: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:56:43: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 02:58:45: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 02:58:45: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 02:58:45: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 02:58:45: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 03:02:38: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 03:02:38: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 03:02:38: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 03:02:38: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 03:12:45: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 03:12:45: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 03:12:45: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 03:12:45: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 03:13:37: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 03:13:37: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 03:13:37: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 03:13:37: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 03:15:33: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 03:15:33: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 03:15:33: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 03:15:33: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 03:20:09: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 03:20:09: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 03:20:09: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 03:20:09: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 03:24:16: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 03:24:16: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 03:24:16: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 03:24:16: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 03:25:45: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 03:25:45: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 03:25:45: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 03:25:45: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 03:26:07: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 03:26:07: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 03:26:07: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 03:26:07: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 03:27:19: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 03:27:19: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 03:27:19: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 03:27:19: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 03:27:35: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 03:27:35: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 03:27:35: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 03:27:35: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 03:27:52: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 03:27:52: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 03:27:52: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 03:27:52: Max-vertices: 1048576, max-indices: 1048576, extensions: 223
+
+2022-01-19 03:32:05: .NET Framework 4.8 (4.0.30319.42000), OpenTK 3.0.0.0
+2022-01-19 03:32:05: OpenGL version: 4.5.0 - Build 23.20.16.4973, shading language: 4.50 - Build 23.20.16.4973
+2022-01-19 03:32:05: Vendor: Intel, driver: Intel(R) HD Graphics 530
+2022-01-19 03:32:05: Max-vertices: 1048576, max-indices: 1048576, extensions: 223

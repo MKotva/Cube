@@ -13,20 +13,16 @@ using Utilities;
 
 namespace _096puzzle
 {
-  public enum CoordinateType { X, Y, Z }
+  public enum SelectionType { X, Y, Z }
   public enum RotationType
-  { HorizontalZP,
-    HorizontalZN,
-    HorizontalYP,
-    HorizontalYN,
-    HorizontalXP,
-    HorizontalXN,
-    VerticalZP,
-    VerticalZN,
-    VerticalYP,
-    VerticalYN,
-    VerticalXP,
-    VerticalXN } //Dont change the order!!!
+  {
+    ZPositive,
+    ZNegative,
+    YPositive,
+    YNegative,
+    XPositive,
+    XNegative
+  } //Dont change the order!!!
 
   public partial class Form1
   {
@@ -63,6 +59,7 @@ namespace _096puzzle
 
     Vector3d intersectVector1;
     Vector3d intersectVector2;
+    Vector3d hittedVector;
 
     double mouseKeyPressCoordinatesX = double.NaN;
     double mouseKeyPressCoordinatesY = double.NaN;
@@ -383,7 +380,7 @@ namespace _096puzzle
       var result = puz.Intersect(ref intersectVector1, ref intersectVector2, out minCube);
 
       if (result == double.PositiveInfinity)
-        intersectVector1 = Vector3d.Zero;
+        intersectVector2 = Vector3d.Zero;
 
       return true;
     }
@@ -410,9 +407,19 @@ namespace _096puzzle
         {
           control.Capture = false;
         }
-        if (control.ClientRectangle.Contains(e.Location) && intersectVector1 != Vector3d.Zero)
+        if (control.ClientRectangle.Contains(e.Location) && intersectVector2 != Vector3d.Zero)
         {
-          var type = GetRotationType(e);
+          SelectionType selectionType;
+          var type = GetRotationType(e, out selectionType);
+
+          if (type == RotationType.YPositive || type == RotationType.YNegative)
+            puz.SetRotation(puz.cubes, minCube, selectionType, type);
+
+          else if (type == RotationType.ZPositive || type == RotationType.ZNegative)
+            puz.SetRotation(puz.cubes, minCube, selectionType, type);
+
+          else if (type == RotationType.XPositive || type == RotationType.XNegative)
+            puz.SetRotation(puz.cubes, minCube, selectionType, type);
 
         }
       }
@@ -438,53 +445,130 @@ namespace _096puzzle
     }
 
 
-    public RotationType GetRotationType (MouseEventArgs e)
+    public RotationType GetRotationType (MouseEventArgs e, out SelectionType selectionType)
     {
-      var xDistance = e.X - mouseKeyPressCoordinatesX;
-      var yDistance = e.Y - mouseKeyPressCoordinatesY;
+      Vector3 pointO = screenToWorld( e.X, e.Y, 0.0f );
+      Vector3 pointT = screenToWorld( e.X, e.Y, 1.0f );
+      var actualScreenVector1 = new Vector3d(pointO.X, pointO.Y, pointO.Z);
+      var actualScreenVector2 = new Vector3d(pointT.X, pointT.Y, pointT.Z) - actualScreenVector1;
 
-      var xDistanceRounded = Math.Abs(xDistance);
-      var yDistanceRounded = Math.Abs(yDistance);
-      if (xDistanceRounded > 80 || yDistanceRounded > 80)
+
+      var xDiff = Math.Abs(intersectVector2.X - actualScreenVector2.X);
+      var yDiff = Math.Abs(intersectVector2.Y - actualScreenVector2.Y);
+      var zDiff = Math.Abs(intersectVector2.Z - actualScreenVector2.Z);
+
+      var axisX = Math.Abs(intersectVector2.X);
+      var axisY = Math.Abs(intersectVector2.Y);
+      var axisZ = Math.Abs(intersectVector2.Z);
+
+      if (xDiff > yDiff && xDiff > zDiff)
       {
-        if (xDistanceRounded > yDistanceRounded)
+        if (axisZ > axisY)
         {
-          if (Math.Abs(intersectVector2.Z) > Math.Abs(intersectVector2.X) && Math.Abs(intersectVector2.Z) > Math.Abs(intersectVector2.Y))
+          selectionType = SelectionType.Y;
+          if (intersectVector1.Z >= 0)
           {
-            if (xDistance > 0)
-              puz.HorizontalRotation(puz.cubes, minCube, CoordinateType.Y, RotationType.HorizontalYP);
-            else
-              puz.HorizontalRotation(puz.cubes, minCube, CoordinateType.Y, RotationType.HorizontalYN);
+            if (actualScreenVector2.X > intersectVector2.X)
+              return RotationType.XPositive;
+            return RotationType.XNegative;
           }
-          else if (Math.Abs(intersectVector2.Y) > Math.Abs(intersectVector2.X) && Math.Abs(intersectVector2.Y) > Math.Abs(intersectVector2.Z))
+          else
           {
-            if (xDistance > 0)
-              puz.HorizontalRotation(puz.cubes, minCube, CoordinateType.Z, RotationType.HorizontalZP);
-            else
-              puz.HorizontalRotation(puz.cubes, minCube, CoordinateType.Z, RotationType.HorizontalZN);
+            if (actualScreenVector2.X > intersectVector2.X)
+              return RotationType.XNegative;
+            return RotationType.XPositive;
           }
-
         }
         else
         {
-          if (Math.Abs(intersectVector2.Z) > Math.Abs(intersectVector2.X) && Math.Abs(intersectVector2.Z) > Math.Abs(intersectVector2.Y))
+          selectionType = SelectionType.Z;
+          if (intersectVector1.Y >= 0)
           {
-            if (yDistance < 0)
-              puz.VerticalRotation(puz.cubes, minCube, CoordinateType.X, RotationType.VerticalYP);
-            else
-              puz.VerticalRotation(puz.cubes, minCube, CoordinateType.X, RotationType.VerticalYN);
+            if (actualScreenVector2.X > intersectVector2.X)
+              return RotationType.XNegative;
+            return RotationType.XPositive;
           }
-          else if (Math.Abs(intersectVector2.Y) > Math.Abs(intersectVector2.X) && Math.Abs(intersectVector2.Y) > Math.Abs(intersectVector2.Z))
+          else
           {
-            if (yDistance < 0)
-              puz.VerticalRotation(puz.cubes, minCube, CoordinateType.X, RotationType.VerticalZP);
-            else
-              puz.VerticalRotation(puz.cubes, minCube, CoordinateType.X, RotationType.VerticalZN);
+            if (actualScreenVector2.X > intersectVector2.X)
+              return RotationType.XPositive;
+            return RotationType.XNegative;
+          }
+        }
+
+      }
+      else if (yDiff > xDiff && yDiff > zDiff)
+      {
+        if (axisZ > axisX)
+        {
+          selectionType = SelectionType.X;
+          if (intersectVector1.Z >= 0)
+          {
+            if (actualScreenVector2.Y > intersectVector2.Y)
+              return RotationType.YNegative;
+            return RotationType.YPositive;
+          }
+          else
+          {
+            if (actualScreenVector2.Y > intersectVector2.Y)
+              return RotationType.YPositive;
+            return RotationType.YNegative;
+          }
+        }
+        else
+        {
+          selectionType = SelectionType.Z;
+          if (intersectVector1.X >= 0)
+          {
+            if (actualScreenVector2.Y > intersectVector2.Y)
+              return RotationType.YPositive;
+            return RotationType.YNegative;
+          }
+          else
+          {
+            if (actualScreenVector2.Y > intersectVector2.Y)
+              return RotationType.YNegative;
+            return RotationType.YPositive;
           }
         }
       }
-
-      return RotationType.VerticalZP; //Default
+      else if (zDiff > xDiff && zDiff > yDiff)
+      {
+        if (axisX > axisY)
+        {
+          selectionType = SelectionType.Y;
+          if (intersectVector1.X >= 0)
+          {
+            if (actualScreenVector2.Z > intersectVector2.Z)
+              return RotationType.ZNegative;
+            return RotationType.ZPositive;
+          }
+          else
+          {
+            if (actualScreenVector2.Z > intersectVector2.Z)
+              return RotationType.ZPositive;
+            return RotationType.ZNegative;
+          }
+        }
+        else
+        {
+          selectionType = SelectionType.X;
+          if (intersectVector1.Y >= 0)
+          {
+            if (actualScreenVector2.Z > intersectVector2.Z)
+              return RotationType.ZPositive;
+            return RotationType.ZNegative;
+          }
+          else
+          {
+            if (actualScreenVector2.Z > intersectVector2.Z)
+              return RotationType.ZNegative;
+            return RotationType.ZPositive;
+          }
+        }
+      }
+      selectionType = SelectionType.Y;
+      return RotationType.YNegative;
     }
 
     /// <summary>
@@ -791,7 +875,7 @@ namespace _096puzzle
     /// <summary>
     /// Revolution in radians per second.
     /// </summary>
-    public double speed = 0.5;
+    public double speed = 0.25;
 
     /// <summary>
     /// Current rotation axis.
@@ -802,28 +886,52 @@ namespace _096puzzle
     /// Angle to rotate (0.0 if no rotation is necessary).
     /// angleLeft += 'sign' * speed * dt;
     /// </summary>
-    public double angleLeft = 0.2;
+    public double angleLeft = 0;
 
     /// <summary>
     /// Check the status of cube. If "True", rotate.
     /// </summary>
     public bool shouldRotate = false;
 
+    /// <summary>
+    /// Represents quaters of round in radians.
+    /// </summary>
+    private  double [] radianAngles = new double[] {0, 1.5707, 3.1415, 4.7123, 6.2831};
 
     /// <summary>
     /// After every rotation set the final angle.
     /// </summary>
-    public double lastSettedHorizontalRotation = 0;
+    public double lastSettedXRotation = 0;
 
     /// <summary>
     /// After every rotation set the final angle.
     /// </summary>
-    public double lastSettedVerticalRotation = 0;
+    public double lastSettedYRotation = 0;
 
+    /// <summary>
+    /// After every rotation set the final angle.
+    /// </summary>
+    public double lastSettedZRotation = 0;
+
+    /// <summary>
+    /// Current type of rotation
+    /// </summary>
     public RotationType rotationType;
 
+    /// <summary>
+    /// Unique id for each cube.
+    /// </summary>
     public uint id;
 
+
+    /// <summary>
+    /// Check if cube have begun rotate.
+    /// </summary>
+    public bool Visited = false;
+
+    /// <summary>
+    /// Color settings.
+    /// </summary>
     public Vector3 colorFront = Vector3.UnitX;
     public Vector3 colorRight = Vector3.UnitZ;
     public Vector3 colorBack = Vector3.UnitX + 0.5f * Vector3.UnitY;
@@ -855,117 +963,112 @@ namespace _096puzzle
       angleLeft = 0.0;
     }
 
+
+    public double GetRoundQuatersInRadians (double degrees, bool negative = false)
+    {
+      int sign = 1;
+      if (negative)
+        sign = -1;
+      degrees = Math.Abs(degrees);
+
+      if (degrees == 0)
+        return sign * radianAngles[0];
+      else if (degrees == 90)
+        return sign * radianAngles[1];
+      else if (degrees == 180)
+        return sign * radianAngles[2];
+      else if (degrees == 270)
+        return sign * radianAngles[3];
+      else
+        return sign * radianAngles[4];
+    }
+
     public void CheckRotation ()
     {
       double newSettedRotation;
-      if (rotationType == RotationType.HorizontalZP || rotationType == RotationType.HorizontalZN)
+      if (rotationType == RotationType.ZPositive || rotationType == RotationType.ZNegative)
       {
-        if (CheckAngle(objectMatrix.M13, objectMatrix.M11, lastSettedHorizontalRotation, rotationType, out newSettedRotation))
+        if (CheckAngle(lastSettedZRotation, rotationType, out newSettedRotation))
         {
-          RoundMatrix(rotationType);
+          lastSettedZRotation = newSettedRotation;
+          RoundMatrix(rotationType, lastSettedZRotation);
           actualPosition = Vector3d.Transform(startPosition, objectMatrix);
-          lastSettedHorizontalRotation = newSettedRotation;
           this.shouldRotate = false;
         }
       }
-      else if (rotationType == RotationType.HorizontalYP || rotationType == RotationType.HorizontalYN)
+      else if (rotationType == RotationType.YPositive || rotationType == RotationType.YNegative)
       {
-        if (CheckAngle(objectMatrix.M13, objectMatrix.M11, lastSettedHorizontalRotation, rotationType, out newSettedRotation))
+        if (CheckAngle(lastSettedYRotation, rotationType, out newSettedRotation))
         {
-          RoundMatrix(rotationType);
+          lastSettedYRotation = newSettedRotation;
+          RoundMatrix(rotationType, lastSettedYRotation);
           actualPosition = Vector3d.Transform(startPosition, objectMatrix);
-          lastSettedHorizontalRotation = newSettedRotation;
-          this.shouldRotate = false;
-        }
-      }
-      else if (rotationType == RotationType.VerticalYP || rotationType == RotationType.VerticalYN)
-      {
-        if (CheckAngle(objectMatrix.M23, objectMatrix.M22, lastSettedVerticalRotation, rotationType, out newSettedRotation))
-        {
-          RoundMatrix(rotationType);
-          actualPosition = Vector3d.Transform(startPosition, objectMatrix);
-          lastSettedVerticalRotation = newSettedRotation;
           this.shouldRotate = false;
         }
       }
       else
       {
-        if (CheckAngle(objectMatrix.M13, objectMatrix.M11, lastSettedVerticalRotation, rotationType, out newSettedRotation))
+        if (CheckAngle(lastSettedXRotation, rotationType, out newSettedRotation))
         {
-          RoundMatrix(rotationType);
+          lastSettedXRotation = newSettedRotation;
+          RoundMatrix(rotationType, lastSettedXRotation);
           actualPosition = Vector3d.Transform(startPosition, objectMatrix);
-          lastSettedVerticalRotation = newSettedRotation;
           this.shouldRotate = false;
         }
       }
     }
 
-    public void RoundMatrix (RotationType rotationType)
+    public void RoundMatrix (RotationType rotationType, double lastSettedRotation)
     {
-      if (rotationType == RotationType.HorizontalZP || rotationType == RotationType.HorizontalZN ||
-          rotationType == RotationType.HorizontalYP || rotationType == RotationType.HorizontalYN)
+      objectMatrix.Row0.W = Math.Round(objectMatrix.Row0.W);
+      objectMatrix.Row0.X = Math.Round(objectMatrix.Row0.X);
+      objectMatrix.Row0.Y = Math.Round(objectMatrix.Row0.Y);
+      objectMatrix.Row0.Z = Math.Round(objectMatrix.Row0.Z);
+
+      objectMatrix.Row1.W = Math.Round(objectMatrix.Row1.W);
+      objectMatrix.Row1.X = Math.Round(objectMatrix.Row1.X);
+      objectMatrix.Row1.Y = Math.Round(objectMatrix.Row1.Y);
+      objectMatrix.Row1.Z = Math.Round(objectMatrix.Row1.Z);
+
+      objectMatrix.Row2.W = Math.Round(objectMatrix.Row2.W);
+      objectMatrix.Row2.X = Math.Round(objectMatrix.Row2.X);
+      objectMatrix.Row2.Y = Math.Round(objectMatrix.Row2.Y);
+      objectMatrix.Row2.Z = Math.Round(objectMatrix.Row2.Z);
+
+      objectMatrix.Row3.W = Math.Round(objectMatrix.Row3.W);
+      objectMatrix.Row3.X = Math.Round(objectMatrix.Row3.X);
+      objectMatrix.Row3.Y = Math.Round(objectMatrix.Row3.Y);
+      objectMatrix.Row3.Z = Math.Round(objectMatrix.Row3.Z);
+
+      if (lastSettedRotation == 360)
       {
-        objectMatrix.M13 = Math.Round(objectMatrix.M13, 1, MidpointRounding.ToEven);
-        objectMatrix.M11 = Math.Round(objectMatrix.M11, 1, MidpointRounding.ToEven);
-        objectMatrix.M31 = Math.Round(objectMatrix.M31, 1, MidpointRounding.ToEven);
-        objectMatrix.M33 = Math.Round(objectMatrix.M33, 1, MidpointRounding.ToEven);
+        lastSettedRotation = 0;
       }
-      else if (rotationType == RotationType.VerticalYP || rotationType == RotationType.VerticalYN)
-      {
-        objectMatrix.M23 = Math.Round(objectMatrix.M23, 1, MidpointRounding.ToEven);
-        objectMatrix.M22 = Math.Round(objectMatrix.M22, 1, MidpointRounding.ToEven);
-        objectMatrix.M32 = Math.Round(objectMatrix.M32, 1, MidpointRounding.ToEven);
-        objectMatrix.M33 = Math.Round(objectMatrix.M33, 1, MidpointRounding.ToEven);
-      }
-      else if (rotationType == RotationType.VerticalYP || rotationType == RotationType.VerticalYN)
-      {
-        objectMatrix.M13 = Math.Round(objectMatrix.M13, 1, MidpointRounding.ToEven);
-        objectMatrix.M11 = Math.Round(objectMatrix.M11, 1, MidpointRounding.ToEven);
-        objectMatrix.M31 = Math.Round(objectMatrix.M31, 1, MidpointRounding.ToEven);
-        objectMatrix.M33 = Math.Round(objectMatrix.M33, 1, MidpointRounding.ToEven);
-      }
+      angleLeft = 0;
     }
 
-    public bool CheckAngle (double angle0, double angle1, double lastSettedRotation, RotationType rotationType, out double newSettedRotation)
+    public bool CheckAngle (double lastSettedRotation, RotationType rotationType, out double newSettedRotation)
     {
-      double plusAngle = 90;
-      if((int)rotationType % 2 != 0)
-        plusAngle *= -1;
-
-      var angle = Math.Atan2(Math.Round(angle0, 3), Math.Round(angle1, 3));
-      var degrees = angle * 180 / Math.PI;
-
-      if (degrees < 0)
-        degrees *= -1;
-
-      else if (degrees > 0)
-        degrees = (180 - degrees) + 180;
-
-      var roundedDegrees = Math.Round(degrees);
-
-      newSettedRotation = lastSettedRotation + plusAngle;
-      if (newSettedRotation == -90)
-        newSettedRotation = 270;
-      else if (newSettedRotation == 360)
-        newSettedRotation = 0;
-
-      if (plusAngle > 0)
+      if (angleLeft > 0)
       {
-        if ((roundedDegrees >= newSettedRotation && newSettedRotation != 0) || (roundedDegrees < 270 && roundedDegrees > 0 && lastSettedRotation == 270))
+        if (angleLeft >= GetRoundQuatersInRadians(90) && angleLeft != 0)
         {
+          newSettedRotation = lastSettedRotation + 90;
+          angleLeft = 0;
           this.shouldRotate = false;
           return true;
         }
       }
       else
       {
-        if ((roundedDegrees <= newSettedRotation && newSettedRotation != 0) || (roundedDegrees > 345  && lastSettedRotation == 90))
+        if (angleLeft <= GetRoundQuatersInRadians(90, true) && angleLeft != 0)
         {
+          newSettedRotation = lastSettedRotation - 90;
+          angleLeft = 0;
           this.shouldRotate = false;
           return true;
         }
       }
-
       newSettedRotation = double.NaN;
       return false;
     }
@@ -983,19 +1086,26 @@ namespace _096puzzle
 
       if (shouldRotate)
       {
-        // Rotate the whole cube.
-        double dt = time - simTime;
-        double dangle = Math.Min( Math.Abs( angleLeft ), dt * speed );
-        int sign = Math.Sign( angleLeft );
+        Visited = true;
+        var rotationAngle = 0.0;
+        if ((int)rotationType % 2 == 0)
+          rotationAngle = 0.04;
+        else
+          rotationAngle = -0.04;
 
-        Matrix4d dm = Matrix4d.Rotate( axis, dangle * sign );
-        objectMatrix *= dm;
+        Matrix4d rotationM;
+        if (axis.X != 0)
+          rotationM = Matrix4d.RotateX(rotationAngle);
+        else if (axis.Y != 0)
+          rotationM = Matrix4d.RotateY(rotationAngle);
+        else
+          rotationM = Matrix4d.RotateZ(rotationAngle);
+
+        angleLeft += rotationAngle;
+        objectMatrix *= rotationM;
         CheckRotation();
       }
-
-      angleLeft = 0.2;
       simTime = time;
-
       return true;
     }
 
@@ -1306,27 +1416,27 @@ namespace _096puzzle
       uint id = 0;
 
 
-      for (double x = -1; x <= 1;)
+      for (double x = -2; x <= 2; x++)
       {
-        for (double y = -1; y <= 1;)
+        for (double y = -2; y <= 2; y++)
         {
-          for (double z = -1; z <= 1;)
+          for (double z = -2; z <= 2; z++)
           {
-            if (z == -1)
+            if (z == -2)
               colorBack = Vector3.UnitX + 0.5f * Vector3.UnitY;
-            if (x == -1)
+            if (x == -2)
               colorLeft = Vector3.UnitY;
-            if (y == -1)
+            if (y == -2)
               colorBottom = Vector3.UnitX + Vector3.UnitY;
-            if (z == 1)
+            if (z == 2)
               colorFront = Vector3.UnitX;
-            if (x == 1)
+            if (x == 2)
               colorRight = Vector3.UnitZ;
-            if (y == 1)
+            if (y == 2)
               colorTop = new Vector3(1.0f, 1.0f, 1.0f);
 
 
-            cubes.Add(new Cube(new Vector3d(x, y, z), 0.47, 0, id, colorFront, colorRight, colorBack, colorLeft, colorTop, colorBottom));
+            cubes.Add(new Cube(new Vector3d(x, y, z), 0.90, 0, id, colorFront, colorRight, colorBack, colorLeft, colorTop, colorBottom));
 
             colorFront = Vector3.Zero;
             colorRight = Vector3.Zero;
@@ -1337,11 +1447,11 @@ namespace _096puzzle
 
             id++;
 
-            z += 0.5;
+            //z += 0.5;
           }
-          y += 0.5;
+          //y += 0.5;
         }
-        x += 0.5;
+        //x += 0.5;
       }
 
       return cubes;
@@ -1455,71 +1565,44 @@ namespace _096puzzle
       return minCube;
     }
 
-    public void HorizontalRotation (List<Cube> cubes, Cube cube, CoordinateType coordinateType, RotationType rotationType)
+    public void SetRotation (List<Cube> cubes, Cube cube, SelectionType coordinateType, RotationType rotationType)
     {
       var row = (IEnumerable<Cube>)new List<Cube>();
       var axis = Vector3d.Zero;
-      if (coordinateType == CoordinateType.Y)
-      {
-        row = cubes.Where(x => x.actualPosition.Y == cube.actualPosition.Y);
-        if (rotationType == RotationType.HorizontalYP)
-          axis = new Vector3d(0, 1, 0);
-        else
-          axis = new Vector3d(0, -1, 0);
-      }
-      else if (coordinateType == CoordinateType.Z)
-      {
-        row = cubes.Where(x => x.actualPosition.Z == cube.actualPosition.Z);
-        if (rotationType == RotationType.HorizontalZP)
-          axis = new Vector3d(0, 0, 1);
-        else
-          axis = new Vector3d(0, 0, -1);
-      }
-      else
+      if (coordinateType == SelectionType.Y)
       {
         row = cubes.Where(x => x.actualPosition.Y == cube.actualPosition.Y);
         axis = new Vector3d(0, 1, 0);
       }
+      else if (coordinateType == SelectionType.Z)
+      {
+        row = cubes.Where(x => x.actualPosition.Z == cube.actualPosition.Z);
+        axis = new Vector3d(0, 0, 1);
+      }
+      else
+      {
+        row = cubes.Where(x => x.actualPosition.X == cube.actualPosition.X);
+        axis = new Vector3d(1, 0, 0);
+      }
       foreach (var cubeRow in row)
       {
+        if (cubeRow.shouldRotate == true)
+        {
+          ResetSelectedCubes(row);
+          break;
+        }
+
         cubeRow.axis = axis;
         cubeRow.shouldRotate = true;
         cubeRow.rotationType = rotationType;
       }
     }
 
-
-    public void VerticalRotation (List<Cube> cubes, Cube cube, CoordinateType coordinateType, RotationType rotationType)
+    private void ResetSelectedCubes(IEnumerable<Cube> selectedCubes)
     {
-      var row = (IEnumerable<Cube>)new List<Cube>();
-      var axis = Vector3d.Zero;
-      if (coordinateType == CoordinateType.X)
-      {
-        row = cubes.Where(x => x.actualPosition.X == cube.actualPosition.X);
-        if (rotationType == RotationType.VerticalYP || rotationType == RotationType.VerticalZP)
-          axis = new Vector3d(-1, 0, 0);
-        else
-          axis = new Vector3d(1, 0, 0);
-      }
-      //else if (coordinateType == CoordinateType.X)
-      //{
-      //  row = cubes.Where(x => x.position.X == cube.position.X);
-      //  if (rotationType == VerticalRotationType.VerticalZP)
-      //    axis = new Vector3d(1, 0, 0);
-      //  else
-      //    axis = new Vector3d(-1, 0, 0);
-      //}
-      else
-      {
-        row = cubes.Where(x => x.actualPosition.Y == cube.actualPosition.Y);
-        axis = new Vector3d(0, 1, 0);
-      }
-      foreach (var cubeRow in row)
-      {
-        cubeRow.axis = axis;
-        cubeRow.shouldRotate = true;
-        cubeRow.rotationType = rotationType;
-      }
+      foreach (var cube in selectedCubes)
+        if(cube.Visited == false)
+          cube.shouldRotate = false;
     }
 
     /// <summary>
