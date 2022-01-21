@@ -33,9 +33,9 @@ namespace _096puzzle
     {
       // {{
 
-      name = "Josef Pelikán";
-      param = "speed=1.0,slow=0.25";
-      tooltip = "speed = <float>, slow = <float>";
+      name = "Milan Kotva";
+      param = "speed=1.0,slow=0.25,size=5,specialAnimation=false,shuffle=false";
+      tooltip = "speed = <float>, slow = <float> , size = <int>, specialAnimation = <bool>, shuffle = <bool>";
       center = new Vector3(0.0f, 0.0f, 0.0f);
       diameter = 4.0f;
 
@@ -59,7 +59,6 @@ namespace _096puzzle
 
     Vector3d intersectVector1;
     Vector3d intersectVector2;
-    Vector3d hittedVector;
 
     double mouseKeyPressCoordinatesX = double.NaN;
     double mouseKeyPressCoordinatesY = double.NaN;
@@ -845,495 +844,7 @@ namespace _096puzzle
   /// Cube object / primary scene - object able to be rendered,
   /// simulated (animated), realtime interaction with the user by mouse pointing.
   /// </summary>
-  public class Cube : DefaultRenderObject
-  {
-    /// <summary>
-    /// Cube center.
-    /// </summary>
-    public Vector3d startPosition;
 
-    /// <summary>
-    /// Cube position after rotation.
-    /// </summary>
-    public Vector3d actualPosition;
-
-    /// <summary>
-    /// Object to world transform matrix.
-    /// </summary>
-    public Matrix4d objectMatrix = Matrix4d.Identity;
-
-    /// <summary>
-    /// Cobe size.
-    /// </summary>
-    public double size;
-
-    /// <summary>
-    /// Last simulated time in seconds.
-    /// </summary>
-    public double simTime;
-
-    /// <summary>
-    /// Revolution in radians per second.
-    /// </summary>
-    public double speed = 0.25;
-
-    /// <summary>
-    /// Current rotation axis.
-    /// </summary>
-    public Vector3d axis = new Vector3d(0,0,1); //Co je tohle za past?????
-
-    /// <summary>
-    /// Angle to rotate (0.0 if no rotation is necessary).
-    /// angleLeft += 'sign' * speed * dt;
-    /// </summary>
-    public double angleLeft = 0;
-
-    /// <summary>
-    /// Check the status of cube. If "True", rotate.
-    /// </summary>
-    public bool shouldRotate = false;
-
-    /// <summary>
-    /// Represents quaters of round in radians.
-    /// </summary>
-    private  double [] radianAngles = new double[] {0, 1.5707, 3.1415, 4.7123, 6.2831};
-
-    /// <summary>
-    /// After every rotation set the final angle.
-    /// </summary>
-    public double lastSettedXRotation = 0;
-
-    /// <summary>
-    /// After every rotation set the final angle.
-    /// </summary>
-    public double lastSettedYRotation = 0;
-
-    /// <summary>
-    /// After every rotation set the final angle.
-    /// </summary>
-    public double lastSettedZRotation = 0;
-
-    /// <summary>
-    /// Current type of rotation
-    /// </summary>
-    public RotationType rotationType;
-
-    /// <summary>
-    /// Unique id for each cube.
-    /// </summary>
-    public uint id;
-
-
-    /// <summary>
-    /// Check if cube have begun rotate.
-    /// </summary>
-    public bool Visited = false;
-
-    /// <summary>
-    /// Color settings.
-    /// </summary>
-    public Vector3 colorFront = Vector3.UnitX;
-    public Vector3 colorRight = Vector3.UnitZ;
-    public Vector3 colorBack = Vector3.UnitX + 0.5f * Vector3.UnitY;
-    public Vector3 colorLeft = Vector3.UnitY;
-    public Vector3 colorTop = new Vector3(1.0f, 1.0f, 1.0f);
-    public Vector3 colorBottom = Vector3.UnitX + Vector3.UnitY;
-
-    public Cube (Vector3d pos, double siz, double time, uint id, Vector3 colorFront, Vector3 colorRight, Vector3 colorBack, Vector3 colorLeft, Vector3 colorTop, Vector3 colorBottom)
-    {
-      startPosition = pos;
-      actualPosition = pos;
-      size = siz;
-      this.id = id;
-
-      this.colorFront = colorFront;
-      this.colorRight = colorRight;
-      this.colorBack = colorBack;
-      this.colorLeft = colorLeft;
-      this.colorTop = colorTop;
-      this.colorBottom = colorBottom;
-
-      Reset(time);
-      fillCache();
-    }
-
-    public void Reset (double time)
-    {
-      simTime = time;
-      angleLeft = 0.0;
-    }
-
-
-    public double GetRoundQuatersInRadians (double degrees, bool negative = false)
-    {
-      int sign = 1;
-      if (negative)
-        sign = -1;
-      degrees = Math.Abs(degrees);
-
-      if (degrees == 0)
-        return sign * radianAngles[0];
-      else if (degrees == 90)
-        return sign * radianAngles[1];
-      else if (degrees == 180)
-        return sign * radianAngles[2];
-      else if (degrees == 270)
-        return sign * radianAngles[3];
-      else
-        return sign * radianAngles[4];
-    }
-
-    public void CheckRotation ()
-    {
-      double newSettedRotation;
-      if (rotationType == RotationType.ZPositive || rotationType == RotationType.ZNegative)
-      {
-        if (CheckAngle(lastSettedZRotation, rotationType, out newSettedRotation))
-        {
-          lastSettedZRotation = newSettedRotation;
-          RoundMatrix(rotationType, lastSettedZRotation);
-          actualPosition = Vector3d.Transform(startPosition, objectMatrix);
-          this.shouldRotate = false;
-        }
-      }
-      else if (rotationType == RotationType.YPositive || rotationType == RotationType.YNegative)
-      {
-        if (CheckAngle(lastSettedYRotation, rotationType, out newSettedRotation))
-        {
-          lastSettedYRotation = newSettedRotation;
-          RoundMatrix(rotationType, lastSettedYRotation);
-          actualPosition = Vector3d.Transform(startPosition, objectMatrix);
-          this.shouldRotate = false;
-        }
-      }
-      else
-      {
-        if (CheckAngle(lastSettedXRotation, rotationType, out newSettedRotation))
-        {
-          lastSettedXRotation = newSettedRotation;
-          RoundMatrix(rotationType, lastSettedXRotation);
-          actualPosition = Vector3d.Transform(startPosition, objectMatrix);
-          this.shouldRotate = false;
-        }
-      }
-    }
-
-    public void RoundMatrix (RotationType rotationType, double lastSettedRotation)
-    {
-      objectMatrix.Row0.W = Math.Round(objectMatrix.Row0.W);
-      objectMatrix.Row0.X = Math.Round(objectMatrix.Row0.X);
-      objectMatrix.Row0.Y = Math.Round(objectMatrix.Row0.Y);
-      objectMatrix.Row0.Z = Math.Round(objectMatrix.Row0.Z);
-
-      objectMatrix.Row1.W = Math.Round(objectMatrix.Row1.W);
-      objectMatrix.Row1.X = Math.Round(objectMatrix.Row1.X);
-      objectMatrix.Row1.Y = Math.Round(objectMatrix.Row1.Y);
-      objectMatrix.Row1.Z = Math.Round(objectMatrix.Row1.Z);
-
-      objectMatrix.Row2.W = Math.Round(objectMatrix.Row2.W);
-      objectMatrix.Row2.X = Math.Round(objectMatrix.Row2.X);
-      objectMatrix.Row2.Y = Math.Round(objectMatrix.Row2.Y);
-      objectMatrix.Row2.Z = Math.Round(objectMatrix.Row2.Z);
-
-      objectMatrix.Row3.W = Math.Round(objectMatrix.Row3.W);
-      objectMatrix.Row3.X = Math.Round(objectMatrix.Row3.X);
-      objectMatrix.Row3.Y = Math.Round(objectMatrix.Row3.Y);
-      objectMatrix.Row3.Z = Math.Round(objectMatrix.Row3.Z);
-
-      if (lastSettedRotation == 360)
-      {
-        lastSettedRotation = 0;
-      }
-      angleLeft = 0;
-    }
-
-    public bool CheckAngle (double lastSettedRotation, RotationType rotationType, out double newSettedRotation)
-    {
-      if (angleLeft > 0)
-      {
-        if (angleLeft >= GetRoundQuatersInRadians(90) && angleLeft != 0)
-        {
-          newSettedRotation = lastSettedRotation + 90;
-          angleLeft = 0;
-          this.shouldRotate = false;
-          return true;
-        }
-      }
-      else
-      {
-        if (angleLeft <= GetRoundQuatersInRadians(90, true) && angleLeft != 0)
-        {
-          newSettedRotation = lastSettedRotation - 90;
-          angleLeft = 0;
-          this.shouldRotate = false;
-          return true;
-        }
-      }
-      newSettedRotation = double.NaN;
-      return false;
-    }
-
-    /// <summary>
-    /// Simulate object to the given time.
-    /// </summary>
-    /// <param name="time">Required target time.</param>
-    /// <param name="puz">Puzzle context.</param>
-    /// <returns>False in case of expiry.</returns>
-    public bool Simulate (double time, Puzzle puz)
-    {
-      if (time <= simTime)
-        return true;
-
-      if (shouldRotate)
-      {
-        Visited = true;
-        var rotationAngle = 0.0;
-        if ((int)rotationType % 2 == 0)
-          rotationAngle = 0.04;
-        else
-          rotationAngle = -0.04;
-
-        Matrix4d rotationM;
-        if (axis.X != 0)
-          rotationM = Matrix4d.RotateX(rotationAngle);
-        else if (axis.Y != 0)
-          rotationM = Matrix4d.RotateY(rotationAngle);
-        else
-          rotationM = Matrix4d.RotateZ(rotationAngle);
-
-        angleLeft += rotationAngle;
-        objectMatrix *= rotationM;
-        CheckRotation();
-      }
-      simTime = time;
-      return true;
-    }
-
-    /// <summary>
-    /// Pointing to the cube.
-    /// </summary>
-    /// <param name="p0">Ray origin.</param>
-    /// <param name="p1">Ray direction.</param>
-    /// <param name="action">Do interaction?</param>
-    /// <returns>Intersection parameter or double.PositiveInfinity if no intersection exists.</returns>
-    public double Intersect (ref Vector3d p0, ref Vector3d p1, bool action = false)
-    {
-      Vector3d A, B, C;
-      Vector2d uv;
-      double nearest = double.PositiveInfinity;
-      int inearest = 0;
-      uint ix;
-
-      for (int i = 0; i + 2 < ind.Length; i += 3)
-      {
-        ix = ind[i] * 3;
-        A = Vector3d.TransformPosition(new Vector3d(vert[ix], vert[ix + 1], vert[ix + 2]), objectMatrix);
-        ix = ind[i + 1] * 3;
-        B = Vector3d.TransformPosition(new Vector3d(vert[ix], vert[ix + 1], vert[ix + 2]), objectMatrix);
-        ix = ind[i + 2] * 3;
-        C = Vector3d.TransformPosition(new Vector3d(vert[ix], vert[ix + 1], vert[ix + 2]), objectMatrix);
-        double curr = Geometry.RayTriangleIntersection( ref p0, ref p1, ref A, ref B, ref C, out uv );
-        if (!double.IsInfinity(curr) &&
-             curr < nearest)
-        {
-          nearest = curr;
-          inearest = i;
-        }
-      }
-
-      return nearest;
-    }
-
-    //--- rendering ---
-
-    /// <summary>
-    /// Vertex array cache. Object coordinates.
-    /// </summary>
-    float[] vert = null;
-
-    /// <summary>
-    /// Index buffer cache.
-    /// </summary>
-    uint[] ind = null;
-
-    unsafe void fillCache ()
-    {
-      uint ori = 0;
-      int stride;
-      float* ptr = null;
-      int vsize = TriangleVertices( ref ptr, ref ori, out stride, false, false, false, false ) / sizeof( float );
-      vert = new float[vsize];
-      fixed (float* p = vert)
-      {
-        float* pp = p;
-        TriangleVertices(ref pp, ref ori, out stride, false, false, false, false);
-      }
-      uint* iptr = null;
-      int isize = TriangleIndices( ref iptr, 0 ) / sizeof( uint );
-      ind = new uint[isize];
-      fixed (uint* ip = ind)
-      {
-        uint* ipp = ip;
-        TriangleIndices(ref ipp, 0);
-      }
-    }
-
-    public override uint Triangles
-    {
-      get
-      {
-        return 12;
-      }
-    }
-
-    public override uint TriVertices
-    {
-      get
-      {
-        return 24;
-      }
-    }
-
-    unsafe void FaceVertices (ref float* ptr, ref Vector3d corner, ref Vector3d side1, ref Vector3d side2, ref Vector3d n, ref Vector3 color,
-                               bool txt, bool col, bool normal, bool ptsize)
-    {
-      // Upper left.
-      if (txt)
-        Fill(ref ptr, 0.0f, 0.0f);
-      if (col)
-        Fill(ref ptr, ref color);
-      if (normal)
-        Fill(ref ptr, ref n);
-      if (ptsize)
-        *ptr++ = 1.0f;
-      Fill(ref ptr, Vector3d.TransformPosition(corner, objectMatrix));
-
-      // Upper right.
-      if (txt)
-        Fill(ref ptr, 1.0f, 0.0f);
-      if (col)
-        Fill(ref ptr, ref color);
-      if (normal)
-        Fill(ref ptr, ref n);
-      if (ptsize)
-        *ptr++ = 1.0f;
-      Fill(ref ptr, Vector3d.TransformPosition(corner + side1, objectMatrix));
-
-      // Lower left.
-      if (txt)
-        Fill(ref ptr, 0.0f, 1.0f);
-      if (col)
-        Fill(ref ptr, ref color);
-      if (normal)
-        Fill(ref ptr, ref n);
-      if (ptsize)
-        *ptr++ = 1.0f;
-      Fill(ref ptr, Vector3d.TransformPosition(corner + side2, objectMatrix));
-
-      // Lower right.
-      if (txt)
-        Fill(ref ptr, 1.0f, 1.0f);
-      if (col)
-        Fill(ref ptr, ref color);
-      if (normal)
-        Fill(ref ptr, ref n);
-      if (ptsize)
-        *ptr++ = 1.0f;
-      Fill(ref ptr, Vector3d.TransformPosition(corner + side1 + side2, objectMatrix));
-    }
-
-    /// <summary>
-    /// Triangles: returns vertex-array size (if ptr is null) or fills vertex array.
-    /// </summary>
-    /// <returns>Data size of the vertex-set (in bytes).</returns>
-    public override unsafe int TriangleVertices (ref float* ptr, ref uint origin, out int stride, bool txt, bool col, bool normal, bool ptsize)
-    {
-      int total = base.TriangleVertices( ref ptr, ref origin, out stride, txt, col, normal, ptsize );
-      if (ptr == null)
-        return total;
-
-      Vector3d corner, n, side1, side2;
-      double s2 = size * 0.5;
-      Vector3 color;
-
-      // 1. front
-      corner.X = startPosition.X - s2;
-      corner.Y = startPosition.Y + s2;
-      corner.Z = startPosition.Z + s2;
-      side1 = Vector3d.UnitX * size;
-      side2 = Vector3d.UnitY * -size;
-      n = Vector3d.UnitZ;
-      color = colorFront; // red
-      FaceVertices(ref ptr, ref corner, ref side1, ref side2, ref n, ref color, txt, col, normal, ptsize);
-
-      // 2. right
-      corner += side1;
-      side1 = Vector3d.UnitZ * -size;
-      n = Vector3d.UnitX;
-      color = colorRight; // blue
-      FaceVertices(ref ptr, ref corner, ref side1, ref side2, ref n, ref color, txt, col, normal, ptsize);
-
-      // 3. back
-      corner += side1;
-      side1 = Vector3d.UnitX * -size;
-      n = -Vector3d.UnitZ;
-      color = colorBack; // orange
-      FaceVertices(ref ptr, ref corner, ref side1, ref side2, ref n, ref color, txt, col, normal, ptsize);
-
-      // 4. left
-      corner += side1;
-      side1 = Vector3d.UnitZ * size;
-      n = -Vector3d.UnitX;
-      color = colorLeft; // green
-      FaceVertices(ref ptr, ref corner, ref side1, ref side2, ref n, ref color, txt, col, normal, ptsize);
-
-      // 5. top
-      side1 = Vector3d.UnitX * size;
-      side2 = Vector3d.UnitZ * size;
-      n = Vector3d.UnitY;
-      color = colorTop; // white
-      FaceVertices(ref ptr, ref corner, ref side1, ref side2, ref n, ref color, txt, col, normal, ptsize);
-
-      // 6. bottom
-      corner.X = startPosition.X - s2;
-      corner.Y = startPosition.Y - s2;
-      corner.Z = startPosition.Z + s2;
-      side1 = Vector3d.UnitX * size;
-      side2 = Vector3d.UnitZ * -size;
-      n = -Vector3d.UnitY;
-      color = colorBottom; // yellow
-      FaceVertices(ref ptr, ref corner, ref side1, ref side2, ref n, ref color, txt, col, normal, ptsize);
-
-      return total;
-    }
-
-    uint origin0 = 0;
-
-    /// <summary>
-    /// Triangles: returns index-array size (if ptr is null) or fills index array.
-    /// </summary>
-    /// <returns>Data size of the index-set (in bytes).</returns>
-    public override unsafe int TriangleIndices (ref uint* ptr, uint origin)
-    {
-      if (ptr != null)
-      {
-        origin0 = origin;
-
-        for (int i = 0; i++ < 6; origin += 4)
-        {
-          *ptr++ = origin;
-          *ptr++ = origin + 2;
-          *ptr++ = origin + 1;
-
-          *ptr++ = origin + 2;
-          *ptr++ = origin + 3;
-          *ptr++ = origin + 1;
-        }
-      }
-
-      return 36 * sizeof(uint);
-    }
-  }
 
   /// <summary>
   /// Puzzle instance.
@@ -1344,6 +855,11 @@ namespace _096puzzle
     /// Simulated world = single cube.
     /// </summary>
     public List<Cube> cubes = new List<Cube>();
+
+    ///Simulate just rotating cubes.
+    public List<IEnumerable<Cube>> rotatingCubes = new List<IEnumerable<Cube>>();
+
+    private RandomJames rnd = new RandomJames();
 
     /// <summary>
     /// Lock-protected simulation state.
@@ -1392,6 +908,29 @@ namespace _096puzzle
     /// </summary>
     public double speed = 1.0;
 
+    /// <summary>
+    /// Size of rubics cube in count of cubes in one row;
+    /// </summary>
+    int sizeOfRubicsCube = 5;
+
+
+    /// <summary>
+    /// Maximal coordinate of rubics cube.
+    /// </summary>
+    int maxCoordinate = 2;
+
+    /// <summary>
+    /// Minimal coordinate od rubics cube.
+    /// </summary>
+    int minCoordinate = -2;
+
+    /// <summary>
+    /// Decide if special animation should be engaged.
+    /// </summary>
+    bool specialAnimation = false;
+
+    bool randomMoves = false;
+
     public Puzzle ()
     {
       Frames = 0;
@@ -1414,44 +953,65 @@ namespace _096puzzle
       Vector3 colorBottom = Vector3.Zero;
 
       uint id = 0;
+      double sizeOfCube = 0.9;
+      int stepSize = 1;
+      bool isEven = false;
 
-
-      for (double x = -2; x <= 2; x++)
+      if(sizeOfRubicsCube % 2 == 1)
       {
-        for (double y = -2; y <= 2; y++)
+        maxCoordinate = sizeOfRubicsCube / 2;
+        minCoordinate = maxCoordinate * -1;
+      }
+      else
+      {
+        maxCoordinate = ((sizeOfRubicsCube / 2) * 2) - 1;
+        minCoordinate = maxCoordinate * -1;
+        sizeOfCube = 1.7;
+        stepSize = 2;
+        isEven = true;
+      }
+
+
+      for (int x = minCoordinate; x <= maxCoordinate; x += stepSize)
+      {
+        for (int y = minCoordinate; y <= maxCoordinate; y += stepSize)
         {
-          for (double z = -2; z <= 2; z++)
+          for (int z = minCoordinate; z <= maxCoordinate; z += stepSize)
           {
-            if (z == -2)
-              colorBack = Vector3.UnitX + 0.5f * Vector3.UnitY;
-            if (x == -2)
-              colorLeft = Vector3.UnitY;
-            if (y == -2)
-              colorBottom = Vector3.UnitX + Vector3.UnitY;
-            if (z == 2)
-              colorFront = Vector3.UnitX;
-            if (x == 2)
-              colorRight = Vector3.UnitZ;
-            if (y == 2)
-              colorTop = new Vector3(1.0f, 1.0f, 1.0f);
+            if (isEven && (x == 0 || y == 0 || z == 0))
+              continue;
+
+            if (((maxCoordinate - Math.Abs(x) < 1) ||
+               (maxCoordinate - Math.Abs(y) < 1)  ||
+               (maxCoordinate - Math.Abs(z) < 1)))
+            {
+              if (z == minCoordinate)
+                colorBack = Vector3.UnitX + 0.5f * Vector3.UnitY;
+              if (x == minCoordinate)
+                colorLeft = Vector3.UnitY;
+              if (y == minCoordinate)
+                colorBottom = Vector3.UnitX + Vector3.UnitY;
+              if (z == maxCoordinate)
+                colorFront = Vector3.UnitX;
+              if (x == maxCoordinate)
+                colorRight = Vector3.UnitZ;
+              if (y == maxCoordinate)
+                colorTop = new Vector3(1.0f, 1.0f, 1.0f);
 
 
-            cubes.Add(new Cube(new Vector3d(x, y, z), 0.90, 0, id, colorFront, colorRight, colorBack, colorLeft, colorTop, colorBottom));
+              cubes.Add(new Cube(new Vector3d(x, y, z), sizeOfCube, 0, id, colorFront, colorRight, colorBack, colorLeft, colorTop, colorBottom));
 
-            colorFront = Vector3.Zero;
-            colorRight = Vector3.Zero;
-            colorBack = Vector3.Zero;
-            colorLeft = Vector3.Zero;
-            colorTop = Vector3.Zero;
-            colorBottom = Vector3.Zero;
+              colorFront = Vector3.Zero;
+              colorRight = Vector3.Zero;
+              colorBack = Vector3.Zero;
+              colorLeft = Vector3.Zero;
+              colorTop = Vector3.Zero;
+              colorBottom = Vector3.Zero;
 
-            id++;
-
-            //z += 0.5;
+              id++;
+            }
           }
-          //y += 0.5;
         }
-        //x += 0.5;
       }
 
       return cubes;
@@ -1470,9 +1030,7 @@ namespace _096puzzle
       Frames = 0;
       Time = 0.0;
 
-      // Initialize children.
-      foreach (var cube in cubes)
-        cube.Reset(0.0);
+      cubes = GenerateCubes();
     }
 
     /// <summary>
@@ -1500,6 +1058,22 @@ namespace _096puzzle
       if (!Util.TryParse(p, "slow", ref slow) ||
            slow < 1.0e-4)
         slow = 0.25;
+
+
+      var prevSizeOfRubicsCube = sizeOfRubicsCube; 
+      if (!Util.TryParse(p, "size", ref sizeOfRubicsCube))
+      {
+        if(sizeOfRubicsCube < 2)
+          sizeOfRubicsCube = 2;
+      }
+
+      if(prevSizeOfRubicsCube != sizeOfRubicsCube)
+      {
+        cubes = GenerateCubes();
+      }
+
+      Util.TryParse(p, "specialAnimation", ref specialAnimation);
+      Util.TryParse(p, "shuffle", ref randomMoves);
     }
 
     /// <summary>
@@ -1512,9 +1086,32 @@ namespace _096puzzle
         return;
 
       Frames++;
-      foreach (var cube in cubes)
-        cube.Simulate(time, this);
+      if (randomMoves)
+      {
+        RandomRotate();
+      }
+      if (rotatingCubes.Count != 0)
+      {
+        for (int i = 0; i < rotatingCubes.Count; i++)
+        {
+          bool isClearRow = true;
+          foreach (var cube in rotatingCubes[i])
+          {
+            if(cube.shouldAnimate == true)
+              isClearRow = false;
+          }
 
+          if (isClearRow)
+          {
+            rotatingCubes.RemoveAt(i);
+            i--;
+            continue;
+          }
+
+          foreach (var cube in rotatingCubes[i])
+            cube.Simulate(time, this, specialAnimation);
+        }
+      }
       Time = time;
     }
 
@@ -1567,42 +1164,43 @@ namespace _096puzzle
 
     public void SetRotation (List<Cube> cubes, Cube cube, SelectionType coordinateType, RotationType rotationType)
     {
-      var row = (IEnumerable<Cube>)new List<Cube>();
+      var row = new List<Cube>();
       var axis = Vector3d.Zero;
       if (coordinateType == SelectionType.Y)
       {
-        row = cubes.Where(x => x.actualPosition.Y == cube.actualPosition.Y);
+        row = new List<Cube>(cubes.Where(x => x.actualPosition.Y == cube.actualPosition.Y));
         axis = new Vector3d(0, 1, 0);
       }
       else if (coordinateType == SelectionType.Z)
       {
-        row = cubes.Where(x => x.actualPosition.Z == cube.actualPosition.Z);
+        row = new List<Cube>(cubes.Where(x => x.actualPosition.Z == cube.actualPosition.Z));
         axis = new Vector3d(0, 0, 1);
       }
       else
       {
-        row = cubes.Where(x => x.actualPosition.X == cube.actualPosition.X);
+        row = new List<Cube>(cubes.Where(x => x.actualPosition.X == cube.actualPosition.X));
         axis = new Vector3d(1, 0, 0);
       }
       foreach (var cubeRow in row)
       {
-        if (cubeRow.shouldRotate == true)
+        if (cubeRow.shouldAnimate == true)
         {
           ResetSelectedCubes(row);
-          break;
+          return;
         }
 
         cubeRow.axis = axis;
-        cubeRow.shouldRotate = true;
+        cubeRow.shouldAnimate = true;
         cubeRow.rotationType = rotationType;
       }
+      rotatingCubes.Add(row);
     }
 
-    private void ResetSelectedCubes(IEnumerable<Cube> selectedCubes)
+    private void ResetSelectedCubes (IEnumerable<Cube> selectedCubes)
     {
       foreach (var cube in selectedCubes)
-        if(cube.Visited == false)
-          cube.shouldRotate = false;
+        if (cube.Visited == false)
+          cube.shouldAnimate = false;
     }
 
     /// <summary>
@@ -1623,6 +1221,74 @@ namespace _096puzzle
 
       // Added indices.
       return (int)(iptr - bakIptr);
+    }
+
+    public void RandomRotate()
+    {
+      SelectionType previousType = SelectionType.X;
+
+      var random1 = rnd.RandomInteger(0, 300);
+
+      var randomSelected = (SelectionType)(random1 / 100);
+      if(previousType == randomSelected || rotatingCubes.Count != 0)
+      {
+        return;
+      }
+
+      if(SelectionType.X == randomSelected)
+      {
+        for(int i = minCoordinate; i <= maxCoordinate; i++)
+        {
+          var random = rnd.RandomInteger(0,100);
+          if ( random > 50)
+          {
+            if(random > 30)
+            {
+              SetRotation(cubes, cubes.Where(x => x.startPosition.X == i).First(), randomSelected, RotationType.YPositive);
+            }
+            else
+            {
+              SetRotation(cubes, cubes.Where(x => x.startPosition.X == i).First(), randomSelected, RotationType.YNegative);
+            }
+          }
+        }
+      }
+      else if(SelectionType.Y == randomSelected)
+      {
+        for (int i = minCoordinate; i <= maxCoordinate; i++)
+        {
+          var random = rnd.RandomInteger(0,100);
+          if (random > 50)
+          {
+            if (random > 30)
+            {
+              SetRotation(cubes, cubes.Where(x => x.startPosition.Y == i).First(), randomSelected, RotationType.XPositive);
+            }
+            else
+            {
+              SetRotation(cubes, cubes.Where(x => x.startPosition.Y == i).First(), randomSelected, RotationType.XNegative);
+            }
+          }
+        }
+      }
+      else
+      {
+        for (int i = minCoordinate; i <= maxCoordinate; i++)
+        {
+          var random = rnd.RandomInteger(0,100);
+          if (random > 50)
+          {
+            if (random > 30)
+            {
+              SetRotation(cubes, cubes.Where(x => x.startPosition.Z == i).First(), randomSelected, RotationType.YPositive);
+            }
+            else
+            {
+              SetRotation(cubes, cubes.Where(x => x.startPosition.Z == i).First(), randomSelected, RotationType.YNegative);
+            }
+          }
+        }
+      }
     }
   }
 }
