@@ -34,8 +34,8 @@ namespace _096puzzle
       // {{
 
       name = "Milan Kotva";
-      param = "speed=1.0,slow=0.25,size=5,specialAnimation=false,shuffle=false";
-      tooltip = "speed = <float>, slow = <float> , size = <int>, specialAnimation = <bool>, shuffle = <bool>";
+      param = "speed=1.0,slow=0.25,size=5,renderAllCubes=false,specialAnimation=false,shuffle=false,randomColor=false";
+      tooltip = "speed = <float>, slow = <float> , size = <int>, specialAnimation = <bool>, shuffle = <bool>, randomColor = <bool>";
       center = new Vector3(0.0f, 0.0f, 0.0f);
       diameter = 4.0f;
 
@@ -931,6 +931,16 @@ namespace _096puzzle
 
     bool randomMoves = false;
 
+    /// <summary>
+    /// Color stuff/
+    /// </summary>
+    bool shouldSelectRandomColor = false;
+
+    /// <summary>
+    /// Render all cubes.
+    /// </summary>
+    bool renderAllCubes = false;
+
     public Puzzle ()
     {
       Frames = 0;
@@ -941,9 +951,23 @@ namespace _096puzzle
     }
 
 
+    private List<Vector3> SetRandomColors()
+    {
+      var colorVectors = new List<Vector3>();
+
+      for (int i = 0; i < 6; i++)
+      {
+        var colorVector = new Vector3(rnd.RandomFloat(0,1f), rnd.RandomFloat(0,1f), rnd.RandomFloat(0,1f));
+        if (!colorVectors.Contains(colorVector))
+          colorVectors.Add(colorVector);
+      }
+      return colorVectors;
+    }
+
     public List<Cube> GenerateCubes ()
     {
       var cubes = new List<Cube> ();
+      var randomColors = SetRandomColors();
 
       Vector3 colorFront = Vector3.Zero;
       Vector3 colorRight = Vector3.Zero;
@@ -981,23 +1005,41 @@ namespace _096puzzle
             if (isEven && (x == 0 || y == 0 || z == 0))
               continue;
 
-            if (((maxCoordinate - Math.Abs(x) < 1) ||
+            if ((maxCoordinate - Math.Abs(x) < 1) ||
                (maxCoordinate - Math.Abs(y) < 1)  ||
-               (maxCoordinate - Math.Abs(z) < 1)))
+               (maxCoordinate - Math.Abs(z) < 1)  ||
+               renderAllCubes)
             {
-              if (z == minCoordinate)
-                colorBack = Vector3.UnitX + 0.5f * Vector3.UnitY;
-              if (x == minCoordinate)
-                colorLeft = Vector3.UnitY;
-              if (y == minCoordinate)
-                colorBottom = Vector3.UnitX + Vector3.UnitY;
-              if (z == maxCoordinate)
-                colorFront = Vector3.UnitX;
-              if (x == maxCoordinate)
-                colorRight = Vector3.UnitZ;
-              if (y == maxCoordinate)
-                colorTop = new Vector3(1.0f, 1.0f, 1.0f);
-
+              if (shouldSelectRandomColor)
+              {
+                if (z == minCoordinate)
+                  colorBack = randomColors[0];
+                if (x == minCoordinate)
+                  colorLeft = randomColors[1];
+                if (y == minCoordinate)
+                  colorBottom = randomColors[2];
+                if (z == maxCoordinate)
+                  colorFront = randomColors[3];
+                if (x == maxCoordinate)
+                  colorRight = randomColors[4];
+                if (y == maxCoordinate)
+                  colorTop = randomColors[5];
+              }
+              else
+              {
+                if (z == minCoordinate)
+                  colorBack = Vector3.UnitX + 0.5f * Vector3.UnitY;
+                if (x == minCoordinate)
+                  colorLeft = Vector3.UnitY;
+                if (y == minCoordinate)
+                  colorBottom = Vector3.UnitX + Vector3.UnitY;
+                if (z == maxCoordinate)
+                  colorFront = Vector3.UnitX;
+                if (x == maxCoordinate)
+                  colorRight = Vector3.UnitZ;
+                if (y == maxCoordinate)
+                  colorTop = new Vector3(1.0f, 1.0f, 1.0f);
+              }
 
               cubes.Add(new Cube(new Vector3d(x, y, z), sizeOfCube, 0, id, colorFront, colorRight, colorBack, colorLeft, colorTop, colorBottom));
 
@@ -1067,13 +1109,21 @@ namespace _096puzzle
           sizeOfRubicsCube = 2;
       }
 
-      if(prevSizeOfRubicsCube != sizeOfRubicsCube)
+      var prevShouldSelect = shouldSelectRandomColor;
+      var prevRenderAllCubes = renderAllCubes;
+      Util.TryParse(p, "specialAnimation", ref specialAnimation);
+      Util.TryParse(p, "shuffle", ref randomMoves);
+      Util.TryParse(p, "randomColor", ref shouldSelectRandomColor);
+      Util.TryParse(p, "renderAllCubes", ref renderAllCubes);
+
+
+      if (prevSizeOfRubicsCube != sizeOfRubicsCube ||
+          shouldSelectRandomColor != prevShouldSelect ||
+          renderAllCubes != prevRenderAllCubes ||
+          shouldSelectRandomColor)
       {
         cubes = GenerateCubes();
       }
-
-      Util.TryParse(p, "specialAnimation", ref specialAnimation);
-      Util.TryParse(p, "shuffle", ref randomMoves);
     }
 
     /// <summary>
