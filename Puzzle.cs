@@ -365,7 +365,7 @@ namespace _096puzzle
     /// <returns>True if handled.</returns>
     bool MouseButtonDown (MouseEventArgs e)
     {
-      if (e.Button != MouseButtons.Right)
+      if (e.Button != MouseButtons.Right || puz.randomMoves)
         return false;
 
       // Rotation of the whole cube by an axis defined by the intersected face.
@@ -909,6 +909,11 @@ namespace _096puzzle
     public double speed = 1.0;
 
     /// <summary>
+    /// Should shuffle cube.
+    /// </summary>
+    public bool randomMoves = false;
+
+    /// <summary>
     /// Size of rubics cube in count of cubes in one row;
     /// </summary>
     int sizeOfRubicsCube = 5;
@@ -928,8 +933,6 @@ namespace _096puzzle
     /// Decide if special animation should be engaged.
     /// </summary>
     bool specialAnimation = false;
-
-    bool randomMoves = false;
 
     /// <summary>
     /// Color stuff/
@@ -1147,8 +1150,11 @@ namespace _096puzzle
           bool isClearRow = true;
           foreach (var cube in rotatingCubes[i])
           {
-            if(cube.shouldAnimate == true)
+            if (cube.shouldAnimate == true)
+            {
               isClearRow = false;
+              break;
+            }
           }
 
           if (isClearRow)
@@ -1159,7 +1165,7 @@ namespace _096puzzle
           }
 
           foreach (var cube in rotatingCubes[i])
-            cube.Simulate(time, this, specialAnimation);
+            cube.Simulate(time, this);
         }
       }
       Time = time;
@@ -1242,6 +1248,8 @@ namespace _096puzzle
         cubeRow.axis = axis;
         cubeRow.shouldAnimate = true;
         cubeRow.rotationType = rotationType;
+        if (specialAnimation)
+          cubeRow.scale = true;
       }
       rotatingCubes.Add(row);
     }
@@ -1279,6 +1287,10 @@ namespace _096puzzle
 
       var random1 = rnd.RandomInteger(0, 300);
 
+      var indexAdder = 1;
+      if(sizeOfRubicsCube % 2 == 0)
+        indexAdder++;
+
       var randomSelected = (SelectionType)(random1 / 100);
       if(previousType == randomSelected || rotatingCubes.Count != 0)
       {
@@ -1287,7 +1299,7 @@ namespace _096puzzle
 
       if(SelectionType.X == randomSelected)
       {
-        for(int i = minCoordinate; i <= maxCoordinate; i++)
+        for(int i = minCoordinate; i <= maxCoordinate; i += indexAdder)
         {
           var random = rnd.RandomInteger(0,100);
           if ( random > 50)
@@ -1305,7 +1317,7 @@ namespace _096puzzle
       }
       else if(SelectionType.Y == randomSelected)
       {
-        for (int i = minCoordinate; i <= maxCoordinate; i++)
+        for (int i = minCoordinate; i <= maxCoordinate; i += indexAdder) //TODO: Fix even cube
         {
           var random = rnd.RandomInteger(0,100);
           if (random > 50)
@@ -1323,7 +1335,7 @@ namespace _096puzzle
       }
       else
       {
-        for (int i = minCoordinate; i <= maxCoordinate; i++)
+        for (int i = minCoordinate; i <= maxCoordinate; i += indexAdder)
         {
           var random = rnd.RandomInteger(0,100);
           if (random > 50)

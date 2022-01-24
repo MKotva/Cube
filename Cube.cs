@@ -95,6 +95,8 @@ namespace _096puzzle
     /// </summary>
     private int scaleIteration = 0;
 
+    public bool scale = false;
+
     private bool shouldScale = true;
 
     private Vector3d scaleBackupStartPoint = new Vector3d(Double.MinValue, Double.MinValue, Double.MinValue);
@@ -355,7 +357,7 @@ namespace _096puzzle
     /// <param name="time">Required target time.</param>
     /// <param name="puz">Puzzle context.</param>
     /// <returns>False in case of expiry.</returns>
-    public bool Simulate (double time, Puzzle puz, bool scale = false)
+    public bool Simulate (double time, Puzzle puz)
     {
       if (time <= simTime)
         return true;
@@ -397,6 +399,7 @@ namespace _096puzzle
               actualPosition = Vector3d.Transform(startPosition, objectMatrix);
               Visited = false;
               shouldAnimate = false;
+              scale = false;
             }
           }
         }
